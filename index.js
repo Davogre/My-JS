@@ -9,3 +9,17 @@
 //  * Increase value of the "postLikes" by 1
 //  * Delete property "shared"
 //  */
+
+let myPost = {};
+myPost = {
+    postTitle: "Object is reference type",
+    postLikes: 0,
+
+};
+myPost.shared = false;
+console.log(myPost);
+
+myPost.postLikes = myPost.postLikes + 1;
+delete myPost.shared;
+
+console.log(myPost);
