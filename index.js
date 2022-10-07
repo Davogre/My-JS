@@ -33,12 +33,31 @@
 //  * Print to the console "myObject" and "copyOfMyObject" and interpret results.
 //  */
 
-let mynObject = {};
+// let mynObject = {};
 
-mynObject.a = 10;
+// mynObject.a = 10;
 
-let copyOfmynObject = mynObject;
-copyOfmynObject.b = false;
+// let copyOfmynObject = mynObject;
+// copyOfmynObject.b = false;
 
-console.log(mynObject);
-console.log(copyOfmynObject);
+// console.log(mynObject);
+// console.log(copyOfmynObject);
+
+// /**
+//  * CHALLENGE 3
+//  * 
+//  * Create object "objectWithNestedObject" with initial value {}.
+//  * Add property "nestedObject" with initial value {}.
+//  * Add property "a" with value "null" to "nestedObject". Use dot notation
+//  * Add property "b" with value "true" to "nestedObject". Use bracket notation. Create new variable with property name
+//  */
+
+let objectWithNestedObject = {};
+objectWithNestedObject.nestedObject = {};
+
+objectWithNestedObject.nestedObject.a = null;
+const newPropertyName = "b";
+// 
+objectWithNestedObject.nestedObject[newPropertyName] = true;
+
+console.log(objectWithNestedObject);
