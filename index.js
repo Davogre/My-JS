@@ -1,10 +1,11 @@
 // /**
-//  * CHALLENGE 1 
-//  * 
-//  * Declare variable "myObject" and assign value {}.
-//  * Print this variable to the console.
-//  * NOTE: variable "myObject" will NOT be reassigned in the future
+//  * CHALLENGE 1
+//  *
+//  * Create variable called "myPost".
+//  * Initial value should be {}
+//  * Add property called "postTitle" and value "Object is reference type"
+//  * Add one more property "postLikes" with value 0
+//  * Add third property "shared" and set its value to "false"
+//  * Increase value of the "postLikes" by 1
+//  * Delete property "shared"
 //  */
-
-const mynObject = {};
-console.log(mynObject);
