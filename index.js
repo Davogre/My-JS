@@ -1,63 +1,23 @@
 // /**
 //  * CHALLENGE 1
-//  *
-//  * Create variable called "myPost".
-//  * Initial value should be {}
-//  * Add property called "postTitle" and value "Object is reference type"
-//  * Add one more property "postLikes" with value 0
-//  * Add third property "shared" and set its value to "false"
-//  * Increase value of the "postLikes" by 1
-//  * Delete property "shared"
-//  */
-
-// let myPost = {};
-// myPost = {
-//     postTitle: "Object is reference type",
-//     postLikes: 0,
-
-// };
-// myPost.shared = false;
-// console.log(myPost);
-
-// myPost.postLikes = myPost.postLikes + 1;
-// delete myPost.shared;
-
-// console.log(myPost);
-
-// /**
-//  * CHALLENGE 2
 //  * 
-//  * Create variable "myObject" and add property "a" - 10.
-//  * Create another variable "copyOfMyObject" and its value should be myObject.
-//  * Add new property "b" with value false to the "copyOfMyObject".
-//  * Print to the console "myObject" and "copyOfMyObject" and interpret results.
+//  * Create function called "mult" and it will have 3 parameters.
+//  * Create new variable and assign to it result of multiplication of all 3 parameters.
+//  * Print to the console result.
+//  * Don't use "return".
 //  */
 
-// let mynObject = {};
+function mult(a, b, c) {
+    const d = a * b * c;
+    console.log(d);
+}
 
-// mynObject.a = 10;
+mult(2, 3, 4); //24
 
-// let copyOfmynObject = mynObject;
-// copyOfmynObject.b = false;
+mult(2, 3, 5); //30
 
-// console.log(mynObject);
-// console.log(copyOfmynObject);
+mult(2, 3, "abc"); // NaN  You will get this value if you try to multiply anything with string
 
-// /**
-//  * CHALLENGE 3
-//  * 
-//  * Create object "objectWithNestedObject" with initial value {}.
-//  * Add property "nestedObject" with initial value {}.
-//  * Add property "a" with value "null" to "nestedObject". Use dot notation
-//  * Add property "b" with value "true" to "nestedObject". Use bracket notation. Create new variable with property name
-//  */
+mult();  // NaN  Undefined * Undefined * Undefined  = NaN
 
-let objectWithNestedObject = {};
-objectWithNestedObject.nestedObject = {};
-
-objectWithNestedObject.nestedObject.a = null;
-const newPropertyName = "b";
-// 
-objectWithNestedObject.nestedObject[newPropertyName] = true;
-
-console.log(objectWithNestedObject);
+console.log(mult(2, 3, 5)); // 30 and Undefine Kyu ki return nahi hhai isliye. 30 is printed inside of the function and function returns "undefined"
