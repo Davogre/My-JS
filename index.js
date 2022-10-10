@@ -1,56 +1,31 @@
-// /**
-//  * EXAMPLE 1
-//  * 
-//  * Try to "declare" function expression
-//  */
-// // It is not possible to use function expression standalone
-// function() { } //Uncaught SyntaxError: Unexpected token (
+/**
+ * JS-BASICS/CORE/CHALLENGE 01: SOLUTION - Function Expressions
+ * 
+ * Use following built-in functions:
+ * setTimeout
+ * setInterval
+ * clearInterval
+ * 
+ * You should print to the console ONLY 5 messages with interval 2 seconds:
+ * "Here is message number 1"
+ * "Here is message number 2"
+ * "Here is message number 3"
+ * "Here is message number 4"
+ * "Here is message number 5"
+ */
 
-// /**
-//  * EXAMPLE 2
-//  * 
-//  * Assign function expression to the variable
-//  */
-// const myFunction = function() { };
+//Using setTimeout()
 
-// console.log(myFunction()); // undefined
+setTimeout(() => { console.log("Here is message number 1") }, 2000);
+setTimeout(() => { console.log("Here is message number 2") }, 4000);
+setTimeout(() => { console.log("Here is message number 3") }, 6000);
+setTimeout(() => { console.log("Here is message number 4") }, 8000);
+setTimeout(() => { console.log("Here is message number 5") }, 10000);
 
-// console.log(myFunction); // ƒ () { }
+// Output:
 
-// /**
-//  * EXAMPLE 3
-//  * 
-//  * Callback function
-//  */
-// setTimeout(function() {
-//   console.log("Delayed message");
-// }, 3000);
-
-// Most Common use case of "  Anonymous Function Expression"
-// Function call using " Anonymous Function Expression" as ARGUMENT.
-
-// Yaha pe dekh sakte hai ki "setTimeout" jo hai ek METHOD hai Global 
-// Object WINDOW ki.
-// WINDOW(global object hai) ki Method ko direct call kar sakte hai.
-
-// At least 1 argument istemaal kar sakto ho aap isme.
-// setTimeout() : iska game ye hai ki
-// pehla argument(jo function hai(jo Anonymous Function Expression hai))
-// usko call karta hai , jitne sec 1000ms, 2000ms jo bhi likho ge usme, 
-// utne time me call karta hai.
-// Call ander ka function automatically after 3 secs
-
-
-// /**
-//  * EXAMPLE 4
-//  * 
-//  * Callback function (example 2)
-//  */
-let i = 1;
-setInterval(function () {
-    console.log("Message logged each 1 second " + i + " waala");
-    i = i + 1;
-}, 1000);
-
-//iski kahani aesi hai ki
-//har sec baad pehla argument chalayega, jo ki function call hai
+// Here is message number 1
+// Here is message number 2
+// Here is message number 3
+// Here is message number 4
+// Here is message number 5
