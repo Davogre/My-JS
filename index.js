@@ -1,63 +1,44 @@
-// /**
-//  * CHALLENGE 1
-//  *
-//  * Create variable called "myPost".
-//  * Initial value should be {}
-//  * Add property called "postTitle" and value "Object is reference type"
-//  * Add one more property "postLikes" with value 0
-//  * Add third property "shared" and set its value to "false"
-//  * Increase value of the "postLikes" by 1
-//  * Delete property "shared"
-//  */
+/**
+ * JS-BASICS/CORE/CHALLENGE 01: SOLUTION - Function Expressions
+ *
+ * Use following built-in functions:
+ * setTimeout
+ * setInterval
+ * clearInterval
+ *
+ * You should print to the console ONLY 5 messages with interval 2 seconds:
+ * "Here is message number 1"
+ * "Here is message number 2"
+ * "Here is message number 3"
+ * "Here is message number 4"
+ * "Here is message number 5"
+ */
 
-// let myPost = {};
-// myPost = {
-//     postTitle: "Object is reference type",
-//     postLikes: 0,
+//Using setTimeout()
 
-// };
-// myPost.shared = false;
-// console.log(myPost);
+// setTimeout(() => { console.log("Here is message number 1") }, 2000);
+// setTimeout(() => { console.log("Here is message number 2") }, 4000);
+// setTimeout(() => { console.log("Here is message number 3") }, 6000);
+// setTimeout(() => { console.log("Here is message number 4") }, 8000);
+// setTimeout(() => { console.log("Here is message number 5") }, 10000);
 
-// myPost.postLikes = myPost.postLikes + 1;
-// delete myPost.shared;
+// Output:
 
-// console.log(myPost);
+// Here is message number 1
+// Here is message number 2
+// Here is message number 3
+// Here is message number 4
+// Here is message number 5
 
-// /**
-//  * CHALLENGE 2
-//  * 
-//  * Create variable "myObject" and add property "a" - 10.
-//  * Create another variable "copyOfMyObject" and its value should be myObject.
-//  * Add new property "b" with value false to the "copyOfMyObject".
-//  * Print to the console "myObject" and "copyOfMyObject" and interpret results.
-//  */
 
-// let mynObject = {};
 
-// mynObject.a = 10;
+// let i = 1;
+// const myInterval = setInterval(() => {
+//     console.log("Here is message number " + i);
+//     i = i + 1;
+// }, 2000);
 
-// let copyOfmynObject = mynObject;
-// copyOfmynObject.b = false;
 
-// console.log(mynObject);
-// console.log(copyOfmynObject);
-
-// /**
-//  * CHALLENGE 3
-//  * 
-//  * Create object "objectWithNestedObject" with initial value {}.
-//  * Add property "nestedObject" with initial value {}.
-//  * Add property "a" with value "null" to "nestedObject". Use dot notation
-//  * Add property "b" with value "true" to "nestedObject". Use bracket notation. Create new variable with property name
-//  */
-
-let objectWithNestedObject = {};
-objectWithNestedObject.nestedObject = {};
-
-objectWithNestedObject.nestedObject.a = null;
-const newPropertyName = "b";
-// 
-objectWithNestedObject.nestedObject[newPropertyName] = true;
-
-console.log(objectWithNestedObject);
+// setTimeout(() => {
+//     clearInterval(myInterval);
+// }, 10000);
